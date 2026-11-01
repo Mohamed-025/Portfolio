@@ -16,6 +16,7 @@ export type Project = {
   technologies: string[];
   thumbnail: string;
   thumbnailAlt: string;
+  thumbnailCaption?: string;
   github: string;
   demo: string;
   features: { label: string; items: string[] }[];
@@ -35,9 +36,10 @@ export const projects: Project[] = [
       "A fullstack learning platform that helps Egyptian preparatory-school students study English: vocabulary, flashcards, quizzes, spaced repetition and a class leaderboard. Designed, built and deployed end to end, and live in production.",
     description:
       "Learnora is an Arabic-first English study platform for Egyptian preparatory-school students, with an English interface option and full RTL support. I built the whole stack myself: the Next.js front end, the PostgreSQL database with Prisma, authentication, an admin panel for content and users, and the deployment. It runs in production on Render with a Neon Postgres database and transactional email for signups, and it installs on phones as a PWA. The source code is in a private repository, so this page describes the project without publishing its code, data or admin tools.",
-    technologies: ["Next.js", "React", "TypeScript", "PostgreSQL", "Prisma", "Neon", "Render", "PWA"],
-    thumbnail: "/projects/learnora.svg",
-    thumbnailAlt: "Learnora project card illustration with flashcards and a progress bar",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "PostgreSQL", "Prisma", "Neon", "Docker", "Render", "PWA"],
+    thumbnail: "/projects/learnora-dashboard.webp",
+    thumbnailAlt: "Learnora student dashboard showing vocabulary mastery, weekly study minutes, recent quiz results and review queue (demo account)",
+    thumbnailCaption: "Learnora dashboard - demo account. Select the image to view it full size.",
     github: "",
     demo: "https://learnora-zhj6.onrender.com/",
     features: [
@@ -48,6 +50,7 @@ export const projects: Project[] = [
           "Spaced-repetition review that brings each word back at the right time",
           "Timed question-bank exams with instant marking and explanations",
           "A personal mistake library that returns until each mistake is mastered",
+          "AI explanations that walk students through their mistakes",
           "Daily progress, study streaks and a class leaderboard",
           "Arabic and English interface with full RTL support",
           "Installs on Android phones as an app (PWA)",
@@ -56,12 +59,12 @@ export const projects: Project[] = [
       {
         label: "How it's built",
         items: [
-          "Next.js and TypeScript front end",
+          "Next.js 15, React 19 and TypeScript front end",
           "PostgreSQL database on Neon, accessed through Prisma",
-          "Server-side authentication and subscription checks",
+          "Server-side authentication with MFA and passkeys, plus subscription checks",
           "Admin panel for content, users, plans and settings",
           "Transactional email for signup confirmation",
-          "Deployed to production on Render",
+          "Docker deployment on Render",
         ],
       },
     ],

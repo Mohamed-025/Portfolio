@@ -44,8 +44,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             <ProjectLinks project={p} />
           </div>
 
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={asset(p.thumbnail)} alt={p.thumbnailAlt} width={1120} height={632} className="card mt-10 w-full object-cover" />
+          <a href={asset(p.thumbnail)} target="_blank" rel="noopener noreferrer" className="mt-10 block" aria-label="Open the full-size image">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={asset(p.thumbnail)} alt={p.thumbnailAlt} width={1120} height={1068} className="card w-full object-cover" />
+          </a>
+          {p.thumbnailCaption ? <p className="mt-2 text-sm text-muted">{p.thumbnailCaption}</p> : null}
 
           <section className="mt-12">
             <h2 className="text-xl font-semibold">About this project</h2>
