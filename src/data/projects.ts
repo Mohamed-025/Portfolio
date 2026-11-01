@@ -17,6 +17,7 @@ export type Project = {
   thumbnail: string;
   thumbnailAlt: string;
   thumbnailCaption?: string;
+  gallery?: { src: string; alt: string; caption?: string }[];
   github: string;
   demo: string;
   features: { label: string; items: string[] }[];
@@ -37,9 +38,16 @@ export const projects: Project[] = [
     description:
       "Learnora is an Arabic-first English study platform for Egyptian preparatory-school students, with an English interface option and full RTL support. I built the whole stack myself: the Next.js front end, the PostgreSQL database with Prisma, authentication, an admin panel for content and users, and the deployment. It runs in production on Render with a Neon Postgres database and transactional email for signups, and it installs on phones as a PWA. The source code is in a private repository, so this page describes the project without publishing its code, data or admin tools.",
     technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "PostgreSQL", "Prisma", "Neon", "Docker", "Render", "PWA"],
-    thumbnail: "/projects/learnora-dashboard.webp",
+    thumbnail: "/projects/learnora-dashboard-en.webp",
     thumbnailAlt: "Learnora student dashboard showing vocabulary mastery, weekly study minutes, recent quiz results and review queue (demo account)",
     thumbnailCaption: "Learnora dashboard - demo account. Select the image to view it full size.",
+    gallery: [
+      {
+        src: "/projects/learnora-dashboard.webp",
+        alt: "Learnora student dashboard in its Arabic interface with full RTL layout (demo account)",
+        caption: "The same dashboard in the Arabic interface (RTL) - demo account.",
+      },
+    ],
     github: "",
     demo: "https://learnora-zhj6.onrender.com/",
     features: [
