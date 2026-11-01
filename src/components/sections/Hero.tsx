@@ -59,7 +59,7 @@ function HeroVisual() {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2 text-xs text-muted">
             <span className="grid h-7 w-7 place-items-center rounded-lg bg-accent2/15 text-accent2"><BarChart3 size={14} /></span>
-            Example layout
+            Dashboard
           </div>
           <span className="flex gap-1.5">
             <i className="h-2 w-2 rounded-full bg-line" /><i className="h-2 w-2 rounded-full bg-line" /><i className="h-2 w-2 rounded-full bg-line" />
