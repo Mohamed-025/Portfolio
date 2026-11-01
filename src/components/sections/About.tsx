@@ -25,18 +25,11 @@ export function About() {
                 alt={`Portrait of ${profile.name}`}
                 width={512}
                 height={640}
-                className="mb-8 aspect-[4/5] w-full rounded-3xl border border-line object-cover shadow-glow"
+                className="aspect-[4/5] w-full rounded-3xl border border-line object-cover shadow-glow"
               />
             </div>
-            <div className="space-y-4 text-lg leading-relaxed text-muted">
-              <p className="text-fg">For me, technology only matters when it makes someone&apos;s work or life a little easier.</p>
-              <p>
-                So far that has meant building reports from production data at an export company, evaluating AI driving scenarios, and taking my own web projects from an empty folder to a live site.
-              </p>
-              <p>I&apos;m the kind of person who keeps asking why until something makes sense. Then I build the fix.</p>
-            </div>
           </Reveal>
-          <ul className="grid content-start gap-4">
+          <ul className="flex flex-col justify-between gap-4">
             {pillars.map((p, i) => (
               <li key={p.n}>
                 <Reveal delay={i * 0.08}>
@@ -54,6 +47,15 @@ export function About() {
             ))}
           </ul>
         </div>
+        <Reveal>
+          <div className="mt-10 max-w-xl space-y-4 text-lg leading-relaxed text-muted">
+            <p className="text-fg">For me, technology only matters when it makes someone&apos;s work or life a little easier.</p>
+            <p>
+              So far that has meant building reports from production data at an export company, evaluating AI driving scenarios, and taking my own web projects from an empty folder to a live site.
+            </p>
+            <p>I&apos;m the kind of person who keeps asking why until something makes sense. Then I build the fix.</p>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
