@@ -3,7 +3,7 @@ import { Github, Linkedin } from "@/components/ui/BrandIcons";
 import { profile } from "@/data/profile";
 
 export function Footer() {
-  const year = new Date().getFullYear();
+  const year = 2023;
   return (
     <footer className="border-t border-line py-12">
       <div className="container-x flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
