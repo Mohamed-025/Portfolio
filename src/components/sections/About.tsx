@@ -29,7 +29,7 @@ export function About() {
               />
             </div>
           </Reveal>
-          <ul className="flex flex-col justify-between gap-4">
+          <ul className="flex flex-col justify-center gap-5">
             {pillars.map((p, i) => (
               <li key={p.n}>
                 <Reveal delay={i * 0.08}>
