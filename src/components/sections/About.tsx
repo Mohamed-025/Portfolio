@@ -17,15 +17,15 @@ export function About() {
       <div className="container-x">
         <SectionHeading eyebrow="About" title="More Than Just Numbers or Code." />
         <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr]">
-          <Reveal>
-            <div>
+          <Reveal className="lg:h-full">
+            <div className="lg:relative lg:h-full">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={asset("/images/portrait-v2.jpg")}
                 alt={`Portrait of ${profile.name}`}
                 width={512}
                 height={640}
-                className="aspect-[4/5] w-full rounded-3xl border border-line object-cover shadow-glow"
+                className="aspect-[4/5] w-full rounded-3xl border border-line object-cover shadow-glow lg:absolute lg:inset-0 lg:aspect-auto lg:h-full lg:object-[center_20%]"
               />
             </div>
           </Reveal>
