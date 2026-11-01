@@ -101,7 +101,7 @@ function HeroVisual() {
             <path d="M0 62 C 30 50, 45 66, 75 52 S 120 24, 150 30 S 205 58, 235 44 S 280 18, 300 12 L 300 92 L 0 92 Z" fill="url(#hlfill)" stroke="none" />
             <path d="M0 70 C 35 66, 55 74, 85 66 S 130 48, 160 54 S 215 68, 245 60 S 285 40, 300 36" fill="none" stroke="rgb(var(--accent))" strokeOpacity="0.55" strokeWidth="1.5" strokeDasharray="4 4" strokeLinecap="round" />
             <path d="M0 62 C 30 50, 45 66, 75 52 S 120 24, 150 30 S 205 58, 235 44 S 280 18, 300 12" fill="none" stroke="url(#hl)" strokeWidth="2.5" strokeLinecap="round" />
-            {[[4, 62], [75, 52], [150, 30], [235, 44], [296, 12]]}.map(([x, y]) => (
+            {[[4, 62], [75, 52], [150, 30], [235, 44], [296, 12]].map(([x, y]) => (
               <circle key={x} cx={x} cy={y} r="3" fill="rgb(var(--bg))" stroke="url(#hl)" strokeWidth="2" />
             ))}
           </svg>
