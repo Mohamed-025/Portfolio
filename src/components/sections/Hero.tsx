@@ -106,7 +106,6 @@ function HeroVisual() {
         <div>
           <p className="font-semibold">{profile.name}</p>
           <p className="text-sm text-muted">{profile.location}</p>
-          <p className="mt-1 text-xs text-muted">Profile photo placeholder. Swap in a real photo in /public/images.</p>
         </div>
       </div>
     </div>

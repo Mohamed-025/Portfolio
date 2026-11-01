@@ -15,7 +15,7 @@ export function Education() {
             </span>
             <div className="flex-1">
               <h3 className="text-xl font-semibold">Cairo University</h3>
-              <p className="mt-1 text-muted">Faculty of Agriculture &mdash; Animal Production Department</p>
+              <p className="mt-1 text-muted">Bachelor&rsquo;s degree</p>
             </div>
             <dl className="grid grid-cols-2 gap-6 text-sm sm:text-right">
               <div>
@@ -23,8 +23,8 @@ export function Education() {
                 <dd className="mt-1 font-semibold">2024</dd>
               </div>
               <div>
-                <dt className="text-muted">Overall grade</dt>
-                <dd className="mt-1 font-semibold">Very Good</dd>
+                <dt className="text-muted">GPA</dt>
+                <dd className="mt-1 font-semibold">3 / 4</dd>
               </div>
             </dl>
           </Card>
