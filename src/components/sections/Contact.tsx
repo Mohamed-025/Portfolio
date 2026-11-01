@@ -67,8 +67,7 @@ export function Contact() {
     <section id="contact" className="section border-t border-line bg-surface/40">
       <div className="container-x">
         <SectionHeading eyebrow="Contact & Let's Connect" title="Have a Project or Opportunity in Mind?">
-          I&apos;m always interested in meaningful opportunities, interesting projects, and collaborations where I can contribute through
-          data, technology, and problem-solving.
+          Whether it&apos;s a role, a project, or just an idea you&apos;d like to talk through, I&apos;d love to hear about it. I read every message myself.
         </SectionHeading>
 
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">

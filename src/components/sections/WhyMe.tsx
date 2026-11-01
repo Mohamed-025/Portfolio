@@ -7,19 +7,19 @@ import { cn } from "@/lib/utils";
 const qa = [
   {
     q: "Why combine Data Analytics and Front-end Development?",
-    a: "Because understanding data is valuable, but knowing how to transform ideas into functional digital experiences creates another level of opportunity.",
+    a: "Data tells me what matters. Front-end lets me do something about it. I never liked choosing between understanding a problem and fixing it, so I learned to do both.",
   },
   {
     q: "What makes me business-minded?",
-    a: "My experience as a business owner and working with operational data taught me that technical solutions should serve real business needs.",
+    a: "I ran my own small business for three years while studying. When the results are yours alone, you learn fast to care about outcomes, not appearances.",
   },
   {
     q: "How do I approach challenges?",
-    a: "I focus on understanding the problem first, breaking it into manageable parts, and building practical solutions.",
+    a: "I slow down first. I make sure I understand what is really going on, break it into small pieces, and solve them one at a time. It sounds simple because it is, and it works.",
   },
   {
     q: "What can I bring to a team?",
-    a: "A combination of analytical thinking, technical knowledge, adaptability, ownership, and a willingness to keep learning.",
+    a: "Someone who genuinely cares. I dig into the details, ask the awkward questions, and own my work. Running my own business taught me there is no one else to pass it to.",
   },
 ];
 

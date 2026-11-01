@@ -1,3 +1,9 @@
+import {
+  BarChart3, BrainCircuit, ClipboardList, Database, Eraser, Filter, LayoutDashboard,
+  MonitorSmartphone, Network, Shuffle, Sigma, Table, Tags, Target, Workflow,
+  type LucideIcon,
+} from "lucide-react";
+import { brandIcons, skillBrandSlug } from "@/components/ui/brandIcons";
 import { Card } from "@/components/ui/Card";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -5,6 +11,41 @@ import { skillGroups } from "@/data/skills";
 import { cn } from "@/lib/utils";
 
 const dot = { accent: "bg-accent", accent2: "bg-accent2", violet: "bg-violet" } as const;
+
+/** Icons for skills that are not product brands (lucide, ISC license). */
+const lucideIcons: Record<string, LucideIcon> = {
+  DAX: Sigma,
+  "Power Query": Filter,
+  "Power Pivot": Table,
+  SQL: Database,
+  "Data Cleaning": Eraser,
+  "Data Transformation": Shuffle,
+  ETL: Workflow,
+  "Data Modeling": Network,
+  "KPI Development": Target,
+  "Dashboard Development": LayoutDashboard,
+  "Data Visualization": BarChart3,
+  "Operational Reporting": ClipboardList,
+  "AI Model Evaluation": BrainCircuit,
+  "Data Annotation": Tags,
+  "Responsive Web Design": MonitorSmartphone,
+};
+
+function SkillIcon({ label, className }: { label: string; className?: string }) {
+  const slug = skillBrandSlug[label];
+  if (slug && brandIcons[slug]) {
+    const b = brandIcons[slug];
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden className={className} fill={b.color ?? "currentColor"}>
+        <path d={b.d} />
+      </svg>
+    );
+  }
+  const L = lucideIcons[label];
+  return L ? <L size={14} aria-hidden className={className} /> : null;
+}
+
+const dot2 = { accent: "text-accent", accent2: "text-accent2", violet: "text-violet" } as const;
 const chip = {
   accent: "hover:border-accent/60 hover:text-accent",
   accent2: "hover:border-accent2/60 hover:text-accent2",
@@ -49,7 +90,8 @@ function GroupBody({ group }: { group: (typeof skillGroups)[number] }) {
       <p className="mt-2 text-sm text-muted">{group.blurb}</p>
       <ul className="mt-5 flex flex-wrap gap-2">
         {group.items.map((s) => (
-          <li key={s} className={cn("rounded-lg border border-line bg-elevated px-3 py-1.5 text-sm text-fg transition", chip[group.accent])}>
+          <li key={s} className={cn("inline-flex items-center gap-1.5 rounded-lg border border-line bg-elevated px-3 py-1.5 text-sm text-fg transition", chip[group.accent])}>
+            <SkillIcon label={s} className={cn("h-3.5 w-3.5 shrink-0", dot2[group.accent])} />
             {s}
           </li>
         ))}

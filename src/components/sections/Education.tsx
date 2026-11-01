@@ -7,7 +7,7 @@ export function Education() {
   return (
     <section id="education" className="section border-y border-line bg-surface/40">
       <div className="container-x">
-        <SectionHeading eyebrow="Education" title="Education & Academic Background." />
+        <SectionHeading eyebrow="Education" title="Where I studied." />
         <Reveal>
           <Card className="flex flex-col gap-6 p-6 sm:flex-row sm:items-center sm:p-8">
             <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-accent/15 text-accent">

@@ -27,6 +27,50 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "learnora-learning-platform",
+    title: "Learnora - English Learning Platform",
+    category: "Web Development",
+    categoryDetail: "Fullstack Development / EdTech",
+    summary:
+      "A complete fullstack learning platform that helps Egyptian preparatory-school students study English: vocabulary, flashcards, quizzes, spaced repetition and a class leaderboard. Designed, built and deployed end to end, and live in production.",
+    description:
+      "Learnora is an Arabic-first English study platform for Egyptian preparatory-school students, with an English interface option and full RTL support. I built the whole stack myself: the Next.js front end, the PostgreSQL database with Prisma, authentication, an admin panel for content and users, and the deployment. It runs in production on Render with a Neon Postgres database and transactional email for signups, and it installs on phones as a PWA. The source code is in a private repository, so this page describes the project without publishing its code, data or admin tools.",
+    technologies: ["Next.js", "React", "TypeScript", "PostgreSQL", "Prisma", "Neon", "Render", "PWA"],
+    thumbnail: "/projects/learnora.svg",
+    thumbnailAlt: "Learnora project card illustration with flashcards and a progress bar",
+    github: "",
+    demo: "https://learnora-zhj6.onrender.com/",
+    features: [
+      {
+        label: "What students get",
+        items: [
+          "Vocabulary flashcards with audio pronunciation, organized by grade, term and unit",
+          "Spaced-repetition review that brings each word back at the right time",
+          "Timed question-bank exams with instant marking and explanations",
+          "A personal mistake library that returns until each mistake is mastered",
+          "Daily progress, study streaks and a class leaderboard",
+          "Arabic and English interface with full RTL support",
+          "Installs on Android phones as an app (PWA)",
+        ],
+      },
+      {
+        label: "How it's built",
+        items: [
+          "Next.js and TypeScript front end",
+          "PostgreSQL database on Neon, accessed through Prisma",
+          "Server-side authentication and subscription checks",
+          "Admin panel for content, users, plans and settings",
+          "Transactional email for signup confirmation",
+          "Deployed to production on Render",
+        ],
+      },
+    ],
+    status: "Completed",
+    statusNote: "Live in production and actively maintained.",
+    featured: true,
+    note: "The source code is private. The live link opens the production deployment; the first visit can take a moment while the server wakes up.",
+  },
+  {
     slug: "call-center-performance-dashboard",
     title: "Call Center Performance Dashboard",
     category: "Data Analytics",
@@ -155,43 +199,6 @@ export const projects: Project[] = [
     ],
     status: "Completed",
     featured: true,
-  },
-  {
-    slug: "learnora-learning-platform",
-    title: "Educational Learning Platform (Learnora)",
-    category: "Web Development",
-    categoryDetail: "Web Development / EdTech",
-    summary:
-      "A web-based educational platform designed to help students learn English through structured vocabulary practice, quizzes, flashcards, and progress tracking.",
-    description:
-      "Learnora is an Arabic-first English study platform for Egyptian preparatory-school students, with an English interface option and RTL support. The source code is in a private repository, so this page describes the project without publishing its code, data or admin tools.",
-    technologies: ["Next.js", "React", "TypeScript", "PostgreSQL", "Prisma", "Vitest", "Playwright"],
-    thumbnail: "/projects/learnora.svg",
-    thumbnailAlt: "Learnora project card illustration with flashcards and a progress bar",
-    github: "",
-    demo: "",
-    features: [
-      {
-        label: "Implemented",
-        items: [
-          "Vocabulary flashcards with audio pronunciation, organized by grade, term and unit",
-          "Timed question-bank exams with instant marking and explanations",
-          "Mistake review using spaced repetition",
-          "Daily progress, weekly goal and study streak",
-          "Class leaderboard between students",
-          "Admin panel for content, users, plans and settings",
-          "Arabic and English interface with RTL support",
-        ],
-      },
-      {
-        label: "Planned or still being tested",
-        items: ["Wider rollout beyond a limited pilot with one class", "Further curriculum content and grammar practice"],
-      },
-    ],
-    status: "In progress",
-    statusNote: "Limited pilot. Not yet a finished public product.",
-    featured: true,
-    note: "Source code is private. A public live link and GitHub link will be added here when the owner chooses to publish them.",
   },
 ];
 

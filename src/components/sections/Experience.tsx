@@ -6,7 +6,7 @@ export function Experience() {
   return (
     <section id="experience" className="section">
       <div className="container-x">
-        <SectionHeading eyebrow="Experience" title="Professional Journey." />
+        <SectionHeading eyebrow="Experience" title="Where I&apos;ve worked." />
         <ol className="relative space-y-10 border-l border-line pl-8 sm:pl-10">
           {experience.map((e, i) => (
             <li key={e.title} className="relative">

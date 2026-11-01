@@ -10,7 +10,6 @@ export function Footer() {
         <div>
           <p className="text-lg font-semibold">{profile.name}</p>
           <p className="mt-1 text-sm text-muted">{profile.role}</p>
-          <p className="mt-4 max-w-sm text-sm text-muted">Built with curiosity, analytical thinking, and a passion for technology.</p>
         </div>
         <div className="flex flex-col items-start gap-4 sm:items-end">
           <ul className="flex gap-3">

@@ -25,11 +25,10 @@ export function Hero() {
             <span className="whitespace-nowrap bg-gradient-to-r from-accent via-accent2 to-violet bg-clip-text text-transparent">Front-end</span>{" "}<span className="bg-gradient-to-r from-violet to-violet bg-clip-text text-transparent">Developer.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-fg/90">
-            I turn complex data into meaningful insights and transform ideas into practical digital experiences.
+            I&apos;m a data analyst and front-end developer based in Cairo. I spend my days turning raw numbers into clear answers, and my free time building websites people actually enjoy using.
           </p>
           <p className="mt-4 max-w-xl leading-relaxed text-muted">
-            With experience across data analytics, business operations, AI evaluation, and web development, I enjoy solving real-world
-            problems through technology, analytical thinking, and creative execution.
+            For three years during university I ran my own small business, so I&apos;ve sat on the other side of the desk. I know what it means to need real answers from your own numbers.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <ButtonLink href="#projects" variant="primary">
@@ -42,7 +41,7 @@ export function Hero() {
               </ButtonLink>
             ) : null}
           </div>
-          <p className="mt-6 text-sm text-muted">{profile.tagline}</p>
+          <p className="mt-6 text-sm text-muted">Data by day, code by night - and I genuinely enjoy both.</p>
         </div>
 
         <HeroVisual />
@@ -90,7 +89,6 @@ function HeroVisual() {
             </defs>
             <path d="M0 55 C 40 20, 70 60, 110 35 S 180 10, 220 30 S 280 15, 300 8" fill="none" stroke="url(#hl)" strokeWidth="3" strokeLinecap="round" />
           </svg>
-          <p className="mt-1 text-[10px] text-muted">Illustration only. Not real data.</p>
         </div>
       </div>
       <div className="floaty absolute -right-3 -top-5 hidden rounded-xl border border-line bg-surface px-3 py-2 text-xs shadow-lg sm:flex sm:items-center sm:gap-2">
@@ -100,9 +98,14 @@ function HeroVisual() {
         SQL &middot; Next.js
       </div>
       <div className="mt-8 flex items-center gap-4 rounded-2xl border border-line bg-surface p-4">
-        <div className="grid h-16 w-16 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-accent to-violet text-2xl font-bold text-bg">
-          {profile.monogram}
-        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={asset("/images/portrait-avatar.jpg")}
+          alt={`Portrait of ${profile.name}`}
+          width={80}
+          height={80}
+          className="h-20 w-20 shrink-0 rounded-2xl border border-line object-cover"
+        />
         <div>
           <p className="font-semibold">{profile.name}</p>
           <p className="text-sm text-muted">{profile.location}</p>

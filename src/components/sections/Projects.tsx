@@ -17,7 +17,7 @@ export function Projects() {
     <section id="projects" className="section">
       <div className="container-x">
         <SectionHeading eyebrow="Featured Projects" title="Work I can show.">
-          Real projects with their real status. Where a project has no public link, no link is shown.
+          Everything here is real: real data, real code, and honest status notes. If a project has no public link, you won&apos;t find a fake one.
         </SectionHeading>
 
         <div role="group" aria-label="Filter projects by category" className="mb-8 flex flex-wrap gap-2">
