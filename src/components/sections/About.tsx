@@ -25,7 +25,7 @@ export function About() {
                 alt={`Portrait of ${profile.name}`}
                 width={512}
                 height={640}
-                className="aspect-[4/5] w-full rounded-3xl border border-line object-cover shadow-glow lg:absolute lg:inset-0 lg:aspect-auto lg:h-full lg:object-[center_20%]"
+                className="aspect-[4/5] w-full rounded-3xl border border-line object-cover shadow-glow lg:absolute lg:left-1/2 lg:top-0 lg:aspect-auto lg:h-full lg:w-auto lg:-translate-x-1/2"
               />
             </div>
           </Reveal>
