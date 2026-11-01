@@ -4,7 +4,7 @@
  * real link exists: the buttons are hidden instead of pointing nowhere.
  */
 export type ProjectCategory = "Data Analytics" | "Web Development";
-export type ProjectStatus = "Completed" | "In progress";
+export type ProjectStatus = "Completed" | "In progress" | "Live in production";
 
 export type Project = {
   slug: string;
@@ -32,7 +32,7 @@ export const projects: Project[] = [
     category: "Web Development",
     categoryDetail: "Fullstack Development / EdTech",
     summary:
-      "A complete fullstack learning platform that helps Egyptian preparatory-school students study English: vocabulary, flashcards, quizzes, spaced repetition and a class leaderboard. Designed, built and deployed end to end, and live in production.",
+      "A fullstack learning platform that helps Egyptian preparatory-school students study English: vocabulary, flashcards, quizzes, spaced repetition and a class leaderboard. Designed, built and deployed end to end, and live in production.",
     description:
       "Learnora is an Arabic-first English study platform for Egyptian preparatory-school students, with an English interface option and full RTL support. I built the whole stack myself: the Next.js front end, the PostgreSQL database with Prisma, authentication, an admin panel for content and users, and the deployment. It runs in production on Render with a Neon Postgres database and transactional email for signups, and it installs on phones as a PWA. The source code is in a private repository, so this page describes the project without publishing its code, data or admin tools.",
     technologies: ["Next.js", "React", "TypeScript", "PostgreSQL", "Prisma", "Neon", "Render", "PWA"],
@@ -65,8 +65,8 @@ export const projects: Project[] = [
         ],
       },
     ],
-    status: "Completed",
-    statusNote: "Live in production and actively maintained.",
+    status: "Live in production",
+    statusNote: "Actively maintained.",
     featured: true,
     note: "The source code is private. The live link opens the production deployment; the first visit can take a moment while the server wakes up.",
   },

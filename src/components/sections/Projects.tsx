@@ -56,7 +56,7 @@ export function Projects() {
                   <div className="flex flex-1 flex-col p-6">
                     <div className="flex items-center justify-between gap-3 text-xs">
                       <span className="text-accent2">{p.categoryDetail}</span>
-                      <span className={cn("rounded-full border px-2 py-0.5", p.status === "Completed" ? "border-accent2/40 text-accent2" : "border-violet/40 text-violet")}>
+                      <span className={cn("rounded-full border px-2 py-0.5", p.status === "In progress" ? "border-violet/40 text-violet" : "border-accent2/40 text-accent2")}>
                         {p.status}
                       </span>
                     </div>
