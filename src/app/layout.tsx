@@ -21,7 +21,6 @@ export const metadata: Metadata = {
     images: [{ url: "og.png", width: 1200, height: 630, alt: `${profile.name}, ${profile.role}` }],
   },
   twitter: { card: "summary_large_image", title: `${profile.name} | ${profile.role}`, description, images: ["og.png"] },
-  icons: { icon: "icon.svg" },
 };
 
 export const viewport: Viewport = { themeColor: "#080c18", colorScheme: "dark light" };
