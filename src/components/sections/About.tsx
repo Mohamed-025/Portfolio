@@ -21,7 +21,7 @@ export function About() {
             <div>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={asset("/images/portrait.jpg")}
+                src={asset("/images/portrait-v2.jpg")}
                 alt={`Portrait of ${profile.name}`}
                 width={512}
                 height={640}
@@ -36,7 +36,7 @@ export function About() {
               <p>I&apos;m the kind of person who keeps asking why until something makes sense. Then I build the fix.</p>
             </div>
           </Reveal>
-          <ul className="grid gap-4">
+          <ul className="grid content-start gap-4">
             {pillars.map((p, i) => (
               <li key={p.n}>
                 <Reveal delay={i * 0.08}>

@@ -100,7 +100,7 @@ function HeroVisual() {
       <div className="mt-8 flex items-center gap-4 rounded-2xl border border-line bg-surface p-4">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={asset("/images/portrait-avatar.jpg")}
+          src={asset("/images/portrait-avatar-v2.jpg")}
           alt={`Portrait of ${profile.name}`}
           width={80}
           height={80}
