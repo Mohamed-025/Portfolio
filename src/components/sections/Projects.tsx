@@ -42,7 +42,7 @@ export function Projects() {
             <li key={p.slug}>
               <Reveal delay={i * 0.05} className="h-full">
                 <article className="card group flex h-full flex-col overflow-hidden transition hover:border-accent/50">
-                  <Link href={`/projects/${p.slug}/`} className="block overflow-hidden border-b border-line bg-elevated" tabIndex={-1} aria-hidden>
+                  <Link href={`/projects/${p.slug}/`} className="relative block overflow-hidden border-b border-line bg-elevated" tabIndex={-1} aria-hidden>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={asset(p.thumbnail)}
@@ -52,6 +52,11 @@ export function Projects() {
                       loading="lazy"
                       className="aspect-[16/9] w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]"
                     />
+                    {p.thumbnailNote ? (
+                      <span className="absolute bottom-2 left-2 rounded-md bg-black/55 px-2 py-0.5 text-[10px] font-medium text-white/85 backdrop-blur-sm">
+                        {p.thumbnailNote}
+                      </span>
+                    ) : null}
                   </Link>
                   <div className="flex flex-1 flex-col p-6">
                     <div className="flex items-center justify-between gap-3 text-xs">

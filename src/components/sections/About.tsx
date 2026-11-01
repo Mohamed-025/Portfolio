@@ -13,7 +13,7 @@ const pillars = [
 
 export function About() {
   return (
-    <section id="about" className="section">
+    <section id="about" className="section pt-10 sm:pt-14">
       <div className="container-x">
         <SectionHeading eyebrow="About" title="More Than Just Numbers or Code." />
         <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr]">

@@ -17,6 +17,7 @@ export type Project = {
   thumbnail: string;
   thumbnailAlt: string;
   thumbnailCaption?: string;
+  thumbnailNote?: string;
   gallery?: { src: string; alt: string; caption?: string }[];
   github: string;
   demo: string;
@@ -41,6 +42,7 @@ export const projects: Project[] = [
     thumbnail: "/projects/learnora-dashboard-en.webp",
     thumbnailAlt: "Learnora student dashboard showing vocabulary mastery, weekly study minutes, recent quiz results and review queue (demo account)",
     thumbnailCaption: "Learnora dashboard - demo account. Select the image to view it full size.",
+    thumbnailNote: "Dashboard images: demo account",
     gallery: [
       {
         src: "/projects/learnora-dashboard.webp",
