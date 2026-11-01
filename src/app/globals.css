@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 248 250 252;
+  --surface: 255 255 255;
+  --elevated: 241 245 249;
+  --line: 214 222 235;
+  --fg: 15 23 42;
+  --muted: 71 85 105;
+  --accent: 2 132 199;
+  --accent2: 8 145 178;
+  --violet: 109 40 217;
+}
+.dark {
+  --bg: 8 12 24;
+  --surface: 14 20 36;
+  --elevated: 20 28 48;
+  --line: 34 45 70;
+  --fg: 232 237 247;
+  --muted: 148 163 190;
+  --accent: 96 165 250;
+  --accent2: 34 211 238;
+  --violet: 167 139 250;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body { @apply bg-bg font-sans text-fg antialiased; }
+::selection { background: rgb(var(--accent) / 0.3); }
+
+:focus-visible { outline: 2px solid rgb(var(--accent)); outline-offset: 3px; border-radius: 6px; }
+
+.container-x { @apply mx-auto w-full max-w-6xl px-5 sm:px-8; }
+.section { @apply py-20 sm:py-28; }
+.eyebrow { @apply text-xs font-semibold uppercase tracking-[0.18em] text-accent; }
+.card { @apply rounded-2xl border border-line bg-surface; }
+.grid-bg {
+  background-image:
+    linear-gradient(rgb(var(--line) / 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(var(--line) / 0.5) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 30%, transparent 75%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+@keyframes floaty { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-8px) } }
+.floaty { animation: floaty 6s ease-in-out infinite; }
