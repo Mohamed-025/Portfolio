@@ -61,7 +61,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
           <section className="mt-12">
             <h2 className="text-xl font-semibold">About this project</h2>
-            <p className="mt-3 leading-relaxed text-muted">{p.description}</p>
+            {p.description.split("\n\n").map((para) => (
+              <p key={para.slice(0, 40)} className="mt-3 leading-relaxed text-muted">
+                {para}
+              </p>
+            ))}
           </section>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
