@@ -84,6 +84,64 @@ export const projects: Project[] = [
     note: "The source code is private. The live link opens the production deployment; the first visit can take a moment while the server wakes up.",
   },
   {
+    slug: "scalper-signal-tool",
+    title: "Scalper Order-Flow Signal Tool",
+    category: "Web Development",
+    categoryDetail: "Fullstack Development / Trading Simulation",
+    summary:
+      "A prototype signal dashboard for US stocks that turns a break-and-retest scalping approach into software: an order book and tape view, an explainable signal engine, and a simulated execution panel with automatic stop-loss. Runs locally on simulated data; live-feed connection is in early testing.",
+    description:
+      "I built this tool to explore a scalping approach: wait for the break, watch the retest, confirm the bounce, then read the tape. A Python (FastAPI) backend runs the signal engine and streams its state over WebSockets; a Next.js, React and TypeScript dashboard shows the order book, the Time & Sales tape and the engine's current state, with explainable signal reasons.\n\nThe interface works in English and Arabic with RTL support, and includes remappable hotkeys, audible voice alerts, per-symbol configuration and persistent settings. Execution is simulated only: instant buy, automatic stop-loss and scale-out run against the simulation, with no broker connection and no real or paper-broker orders.\n\nQuant microstructure metrics such as order-flow imbalance, micro-price and tape intensity are display telemetry and do not gate signals. Market-data integration is in early testing: Alpaca is implemented as a read-only connection test, and Finnhub is implemented as a trades-only WebSocket source with no signal-engine input. A working live feed on the local installation has not yet been confirmed. All screenshots show synthetic demo data.",
+    technologies: ["Python", "FastAPI", "Next.js", "React", "TypeScript", "Tailwind CSS", "WebSockets"],
+    thumbnail: "/projects/scalper-dashboard-en.webp",
+    thumbnailAlt:
+      "Scalper signal tool dashboard showing the signal engine states, order book, Time & Sales tape and simulated execution panel (synthetic demo data)",
+    thumbnailCaption: "Main dashboard - synthetic demo data, not a live feed.",
+    thumbnailNote: "Screenshots: synthetic demo data",
+    gallery: [
+      {
+        src: "/projects/scalper-halt-watch-en.webp",
+        alt: "Halt-resumption watch state with quant telemetry and execution audit log (synthetic demo data)",
+        caption: "Halt-resumption watch with quant telemetry and execution audit log - synthetic demo data.",
+      },
+      {
+        src: "/projects/scalper-dashboard-ar.webp",
+        alt: "The same dashboard in its Arabic interface with full RTL layout (synthetic demo data)",
+        caption: "The dashboard in Arabic (RTL) - synthetic demo data.",
+      },
+    ],
+    github: "",
+    demo: "",
+    features: [
+      {
+        label: "What it does",
+        items: [
+          "Order book (Level 2 view) and Time & Sales tape display",
+          "Break-and-retest signal engine with explainable states, including halt-resumption watch",
+          "Simulated instant execution with automatic stop-loss and scale-out",
+          "Remappable hotkeys and audible voice alerts",
+          "English and Arabic interface with RTL support",
+          "Per-symbol configuration and persistent settings",
+          "Microstructure telemetry for information only, not signal gating",
+        ],
+      },
+      {
+        label: "How it's built",
+        items: [
+          "Python backend with FastAPI, uvicorn and WebSockets",
+          "Next.js, React and TypeScript dashboard with Tailwind CSS",
+          "State machine covering break, retest, bounce and halt-resumption handling",
+          "144 automated backend tests passing in the development sandbox",
+          "Data-provider layer with capability labels; live-feed integration in early testing",
+        ],
+      },
+    ],
+    status: "In progress",
+    statusNote: "Signals are experimental and not validated for real trading.",
+    featured: true,
+    note: "The source code is private and the tool runs locally, so this page shows screenshots of the simulation instead of a live link. All values shown are synthetic demo data.",
+  },
+  {
     slug: "call-center-performance-dashboard",
     title: "Call Center Performance Dashboard",
     category: "Data Analytics",
