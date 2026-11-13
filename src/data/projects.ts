@@ -93,19 +93,19 @@ export const projects: Project[] = [
     description:
       "I built this tool to explore a scalping approach: wait for the break, watch the retest, confirm the bounce, then read the tape. A Python (FastAPI) backend runs the signal engine and streams its state over WebSockets; a Next.js, React and TypeScript dashboard shows the order book, the Time & Sales tape and the engine's current state, with explainable signal reasons.\n\nThe interface works in English and Arabic with RTL support, and includes remappable hotkeys, audible voice alerts, per-symbol configuration and persistent settings. Execution is simulated only: instant buy, automatic stop-loss and scale-out run against the simulation, with no broker connection and no real or paper-broker orders.\n\nQuant microstructure metrics such as order-flow imbalance, micro-price and tape intensity are display telemetry and do not gate signals. Market-data integration is in early testing: Alpaca is implemented as a read-only connection test, and Finnhub is implemented as a trades-only WebSocket source with no signal-engine input. A working live feed on the local installation has not yet been confirmed. All screenshots show synthetic demo data.",
     technologies: ["Python", "FastAPI", "Next.js", "React", "TypeScript", "Tailwind CSS", "WebSockets"],
-    thumbnail: "/projects/scalper-dashboard-en.webp",
+    thumbnail: "/projects/scalper-dashboard-en-hd.webp",
     thumbnailAlt:
       "Scalper signal tool dashboard showing the signal engine states, order book, Time & Sales tape and simulated execution panel (synthetic demo data)",
     thumbnailCaption: "Main dashboard - synthetic demo data, not a live feed.",
     thumbnailNote: "Screenshots: synthetic demo data",
     gallery: [
       {
-        src: "/projects/scalper-halt-watch-en.webp",
+        src: "/projects/scalper-halt-watch-en-hd.webp",
         alt: "Halt-resumption watch state with quant telemetry and execution audit log (synthetic demo data)",
         caption: "Halt-resumption watch with quant telemetry and execution audit log - synthetic demo data.",
       },
       {
-        src: "/projects/scalper-dashboard-ar.webp",
+        src: "/projects/scalper-dashboard-ar-hd.webp",
         alt: "The same dashboard in its Arabic interface with full RTL layout (synthetic demo data)",
         caption: "The dashboard in Arabic (RTL) - synthetic demo data.",
       },
